@@ -4,5 +4,8 @@ from .views import list_books
 
 #url configuration:
 urlpatterns = [
-    path('list_department/', views.list_department) 
+    path('list_department/', views.list_department) ,
+    path('LibraryDetailView/', views.list_department) 
+
+    
 ]
