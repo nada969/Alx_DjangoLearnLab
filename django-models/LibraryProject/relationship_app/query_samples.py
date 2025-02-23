@@ -29,4 +29,3 @@ books.all()
 
 # Retrieve the librarian for a library.
 all_librarian = Librarian.objects.all()
-Librarian.objects.get(library=)
