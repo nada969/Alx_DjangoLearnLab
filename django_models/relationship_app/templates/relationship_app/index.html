@@ -1,0 +1,26 @@
+{% comment %} {% if department_new %}
+<ul>
+    {%for department in department_new%}
+    <li> {{department.id}} : {{department.neme}} </li>
+    {% endfor %}
+</ul>
+
+{% else %}
+    <p>No polls are available.</p>
+{% endif %} {% endcomment %}
+
+<!--base.html-->
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+</head>
+
+<body>
+    <!-- Content -->
+    {% comment %} <script src="{% static 'js/script.js' %}"></script> {% endcomment %}
+</body>
+
+</html>
