@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views                 ##(.) refere to here
-
+from .views import list_books
 
 #url configuration:
 urlpatterns = [
@@ -9,5 +9,4 @@ urlpatterns = [
     path('login/', views.list_department) ,
     path('logout/', views.list_department) ,
     path('register/', views.list_department) 
-
 ]
