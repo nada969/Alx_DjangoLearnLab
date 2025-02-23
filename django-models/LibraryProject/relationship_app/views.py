@@ -34,7 +34,8 @@ from django.shortcuts import render
 #     # return HttpResponse('hello')
 
 
-from .models import Author , Book , Librarian , Library
+from .models import Author , Book , Librarian 
+from .models import Library
 from django.views.generic import TemplateView
 
 def list_data(request):
