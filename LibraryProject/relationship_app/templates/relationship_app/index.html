@@ -1,0 +1,10 @@
+{% if department_new %}
+<ul>
+    {%for department in department_new%}
+    <li> {{department.id}} : {{department.neme}} </li>
+    {% endfor %}
+</ul>
+
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
