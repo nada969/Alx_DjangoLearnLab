@@ -4,5 +4,10 @@ from . import views                 ##(.) refere to here
 
 #url configuration:
 urlpatterns = [
-    path('list_department/', views.list_department) 
+    path('list_department/', views.list_department) ,
+    path('LibraryDetailView/', views.list_department) ,
+    path('login/', views.list_department) ,
+    path('logout/', views.list_department) ,
+    path('register/', views.list_department) 
+
 ]
