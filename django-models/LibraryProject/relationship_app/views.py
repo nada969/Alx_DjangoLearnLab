@@ -37,7 +37,7 @@ from django.shortcuts import render
 from .models import Author , Book , Librarian 
 from .models import Library
 from django.views.generic import TemplateView
-
+from django.views.generic.detail import DetailView
 def list_data(request):
     books = Book.objects.all()
 
