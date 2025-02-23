@@ -32,8 +32,11 @@ from django.shortcuts import render
 #     return render(request, 'relationship_app/index.html', context)
 
 #     # return HttpResponse('hello')
+##### task 2
+from django.contrib.auth import login
+from django.contrib.auth.forms import UserCreationForm
 
-
+#### task 1
 from .models import Author , Book , Librarian 
 from .models import Library
 from django.views.generic import TemplateView
