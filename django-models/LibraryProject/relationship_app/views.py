@@ -35,7 +35,7 @@ from django.shortcuts import render
 ##### task 2
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-
+UserCreationForm()
 #### task 1
 from .models import Author , Book , Librarian 
 from .models import Library
