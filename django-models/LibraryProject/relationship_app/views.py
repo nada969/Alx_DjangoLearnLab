@@ -48,3 +48,5 @@ def list_data(request):
 
 class list_de(TemplateView):
     template_name = 'relationship_app/library_detail.html'
+    return render(request,'relationship_app/register.html',{'books':books})
+
