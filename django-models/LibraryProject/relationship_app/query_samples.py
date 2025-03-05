@@ -17,10 +17,11 @@ from .models import Author , Book , Librarian , Library
 
 
 ####Query all books by a specific author.
+author = Author.objects.create('name')
+book1 = Book.objects.create('book1','name')
+book1 = Book.objects.create('book2','name')
+all_books = author.books.all()
 
-all_books = Book.objects.order_by('author')
-Author.objects.get(name=author_name)
-objects.filter(author=author)
 
 # List all books in a library.
 # List all books in a library.
