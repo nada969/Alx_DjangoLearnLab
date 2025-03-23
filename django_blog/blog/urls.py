@@ -13,4 +13,4 @@ urlpatterns = [
     path('post/<int:pk>/delete/',post_delete.as_view()) ,
     path("post/<int:pk>/update/",post_update.as_view()),
 
-]"tags/<slug:tag_slug>/", "PostByTagListView.as_view()"
+]
