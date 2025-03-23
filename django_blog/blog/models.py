@@ -9,3 +9,8 @@ class Post(models.Model):
     content= models.TextField()
     published_date= models.DateTimeField(auto_now_add=True)
     author= models.ForeignKey(User,on_delete=models.CASCADE,related_name='posts')      ### to Django’s User model, with a relation to handle multiple posts by a single author.
+
+class Tag(models.Model):
+    name = models.CharField(max_length=100)
+    posts = models.ManyToManyField(Post,related_name='tag')
+

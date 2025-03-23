@@ -7,6 +7,8 @@ from django.contrib.auth.models import User
 from .models import Post
 from django.views.generic import ListView , DetailView 
 from django.views.generic.edit import CreateView , UpdateView , DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+
 # ListView to display all blog posts.
 # DetailView to show individual blog posts.
 # CreateView to allow authenticated users to create new posts.
@@ -17,7 +19,7 @@ class post_view(ListView):
     template_name = 'posts/post.html'
     model = Post
 
-class create_post(CreateView):
+class create_post(LoginRequiredMixin,CreateView):
     template_name = 'posts/create_post.html'
     model = Post
     
@@ -32,7 +34,7 @@ class post_delete(DeleteView):
     template_name = 'posts/create_post.html'
     model = Post
 
-class post_update(UpdateView):
+class post_update(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     template_name = 'posts/create_post.html'
     model = Post
 
