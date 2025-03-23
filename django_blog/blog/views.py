@@ -1,8 +1,8 @@
-from django.shortcuts import render , redirect 
+from django.shortcuts import render , redirect , get_object_or_404
 from django.contrib.auth import login , logout , authenticate
 from django.contrib.auth.forms import UserCreationForm , AuthenticationForm
 from django.urls import reverse
-from django.http import HttpResponse
+from django.contrib.auth.models import User
 
 def home(request):
     return render(request, 'blog/home.html')
@@ -43,3 +43,9 @@ def user_login(request):
 
 def user_logout(request):
     pass
+
+def profile(request,username):
+    if request.method == "GET":
+        user = get_object_or_404(User, username=username)
+
+    return render(request, 'blog/profile.html', {'user': user})
