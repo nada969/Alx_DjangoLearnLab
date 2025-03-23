@@ -4,6 +4,39 @@ from django.contrib.auth.forms import UserCreationForm , AuthenticationForm
 from django.urls import reverse
 from django.contrib.auth.models import User
 
+from .models import Post
+from django.views.generic import ListView , DetailView 
+from django.views.generic.edit import CreateView , UpdateView , DeleteView
+# ListView to display all blog posts.
+# DetailView to show individual blog posts.
+# CreateView to allow authenticated users to create new posts.
+# UpdateView to enable post authors to edit their posts.
+# DeleteView to let authors delete their posts.
+
+class post_view(ListView):
+    template_name = 'posts/post.html'
+    model = Post
+
+class create_post(CreateView):
+    template_name = 'posts/create_post.html'
+    model = Post
+    
+    def get_success_url(self):
+        return reverse('post')
+
+class post_detail(DeleteView):
+    template_name = 'posts/create_post.html'
+    model = Post
+
+class post_delete(DeleteView):
+    template_name = 'posts/create_post.html'
+    model = Post
+
+class post_update(UpdateView):
+    template_name = 'posts/create_post.html'
+    model = Post
+
+
 def home(request):
     return render(request, 'blog/home.html')
 
