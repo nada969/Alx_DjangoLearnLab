@@ -18,7 +18,7 @@ def user_signup(request):
     else:
         form = UserCreationForm()
 
-    return render(request,'blog/signup.html',{'form':form})
+    return render(request,'blog/register.html',{'form':form})
 
 def user_login(request):
     if request.method == 'POST':  
@@ -30,7 +30,7 @@ def user_login(request):
 
             if user is not None:
                 login(request,user)
-                return redirect('home')
+                return redirect('profile')
             else:
             # Authentication failed - form.is_valid() was True but user wasn't found
             # This is rare but could happen if user was deleted after form validation
