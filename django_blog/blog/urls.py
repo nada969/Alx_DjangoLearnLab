@@ -9,5 +9,8 @@ urlpatterns = [
     path('log_out/',views.user_logout,name='log_out'),
     path('profile/',views.profile,name='profile'),
     path('posts/', post_view.as_view(), name='post'),
-    path('create_post/',create_post.as_view(),name='create_post'),
+    path('"post/new/',create_post.as_view(),name='create_post'),
+    path('post/<int:pk>/delete/',post_delete.as_view()) ,
+    path("post/<int:pk>/update/",post_update.as_view()),
+
 ]
