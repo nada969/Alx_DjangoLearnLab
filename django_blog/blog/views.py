@@ -8,7 +8,7 @@ from .models import Post
 from django.views.generic import ListView , DetailView 
 from django.views.generic.edit import CreateView , UpdateView , DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-
+"Post.objects.filter", "title__icontains", "tags__name__icontains", "content__icontains"
 # ListView to display all blog posts.
 # DetailView to show individual blog posts.
 # CreateView to allow authenticated users to create new posts.
