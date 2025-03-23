@@ -77,8 +77,9 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db.mysql',
-        'USER': 'rNada',
+        # 'NAME': str(BASE_DIR / 'db.mysql'),
+        'NAME': 'store',  ### name of DB
+        'USER': 'Nada',
         'PASSWORD': '0752',
         'HOST': 'localhost',  # Use the server IP if remote
         'PORT': '3306',  # Default MySQL port
