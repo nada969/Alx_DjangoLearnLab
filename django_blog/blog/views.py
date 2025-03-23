@@ -17,7 +17,7 @@ class post_view(ListView):
     template_name = 'posts/post.html'
     model = Post
 
-class create_post(CreateView):
+class create_post(LoginRequiredMixin,CreateView):
     template_name = 'posts/create_post.html'
     model = Post
     
@@ -32,7 +32,7 @@ class post_delete(DeleteView):
     template_name = 'posts/create_post.html'
     model = Post
 
-class post_update(UpdateView):
+class post_update(LoginRequiredMixin,UserPassesTestMixin,UpdateView):
     template_name = 'posts/create_post.html'
     model = Post
 
